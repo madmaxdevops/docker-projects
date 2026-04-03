@@ -1,66 +1,41 @@
-📊 Number of Visits to Site (Node.js + Redis + Docker)
-📌 Overview
+# 📊 Visitor Counter: Node.js + Redis + Docker
 
-This project demonstrates a simple and scalable web application that tracks the number of visits to a website using Node.js, Redis, and Docker.
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io/)
 
-Each time a user accesses the application, the visit counter increments and displays the total number of visits.
+A scalable, containerized web application designed to demonstrate the fundamentals of **Service Orchestration**, **State Management**, and **Microservice Communication**.
 
-🏗️ Architecture
+---
 
-User Request → Node.js Server → Redis → Response (Visit Count)
+## 🏗️ Architecture & Workflow
 
-Node.js handles HTTP requests
-Redis stores and updates the visit count
-Docker ensures consistent deployment across environments
-🚀 Features
-Lightweight and fast Node.js server
-Persistent visit counter using Redis
-Containerized setup with Docker
-Easy to scale and deploy
-Ideal for learning DevOps fundamentals
-📂 Project Structure
-app.js – Node.js application
-package.json – Dependencies
-Dockerfile – Node.js container configuration
-docker-compose.yml – Multi-container setup
-README.md
-⚙️ Prerequisites
+The application follows a classic microservices pattern where the web layer and data layer are decoupled.
 
-Make sure you have installed:
+**User Request** → **Node.js Server** → **Redis (In-Memory Store)** → **Response**
 
-Docker
-Docker Compose
-🐳 Setup & Run (Using Docker)
-Clone the repository
-Navigate to the project directory
-Run: docker-compose up --build
-Open browser and visit: http://localhost:3000
+1.  **Client:** Initiates an HTTP request to the web server.
+2.  **Node.js Server:** Processes logic and communicates with Redis.
+3.  **Redis:** Maintains a high-speed, persistent visit counter.
+4.  **Docker Compose:** Orchestrates the networking between containers.
 
-You will see the number of visits displayed on the screen.
+---
 
-🔄 How It Works
-User sends a request to the application
-Node.js server processes the request
-Redis stores and retrieves the visit count
-The count is incremented on each visit
-Updated count is returned to the user
-📈 DevOps Perspective
+## 🚀 Key Features
 
-This project demonstrates:
+* **Lightweight Runtime:** Powered by Node.js 18 (Alpine).
+* **High-Speed State:** Uses Redis for atomic counter increments.
+* **Infrastructure as Code:** Environment defined via `Dockerfile` and `docker-compose.yml`.
+* **Zero Config:** Ready to deploy with a single command.
 
-Containerization using Docker
-Service orchestration with Docker Compose
-State management using Redis
-Microservice communication between services
-🔧 Improvements (Future Enhancements)
-Add Kubernetes deployment
-Implement CI/CD pipeline (Jenkins or GitHub Actions)
-Use Nginx as a reverse proxy
-Enable persistent Redis storage
-Support horizontal scaling
-🧪 Testing
+---
 
-You can test the application by refreshing the browser multiple times or by sending repeated requests to the application endpoint.
+## 📂 Project Structure
 
-👨‍💻 Author
-Gaurav Kumbhar https://github.com/madmaxdevops
+```text
+.
+├── app.js               # Main application logic
+├── package.json         # Node.js dependencies
+├── Dockerfile           # Node.js container blueprint
+├── docker-compose.yml   # Orchestration logic
+└── README.md            # Documentation
