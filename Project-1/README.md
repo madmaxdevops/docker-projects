@@ -39,3 +39,10 @@ The application follows a classic microservices pattern where the web layer and 
 ├── Dockerfile           # Node.js container blueprint
 ├── docker-compose.yml   # Orchestration logic
 └── README.md            # Documentation
+
+---
+
+## 👨‍💻 Author
+
+Gaurav Kumbhar
+https://github.com/madmaxdevops
