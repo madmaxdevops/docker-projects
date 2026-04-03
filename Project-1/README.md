@@ -1,111 +1,66 @@
-# ⚛️ React Web App
+📊 Number of Visits to Site (Node.js + Redis + Docker)
+📌 Overview
 
-A frontend web application built using **Create React App**, designed for fast development and easy deployment.
+This project demonstrates a simple and scalable web application that tracks the number of visits to a website using Node.js, Redis, and Docker.
 
----
+Each time a user accesses the application, the visit counter increments and displays the total number of visits.
 
-## 📌 Overview
+🏗️ Architecture
+
+User Request → Node.js Server → Redis → Response (Visit Count)
+
+Node.js handles HTTP requests
+Redis stores and updates the visit count
+Docker ensures consistent deployment across environments
+🚀 Features
+Lightweight and fast Node.js server
+Persistent visit counter using Redis
+Containerized setup with Docker
+Easy to scale and deploy
+Ideal for learning DevOps fundamentals
+📂 Project Structure
+app.js – Node.js application
+package.json – Dependencies
+Dockerfile – Node.js container configuration
+docker-compose.yml – Multi-container setup
+README.md
+⚙️ Prerequisites
+
+Make sure you have installed:
+
+Docker
+Docker Compose
+🐳 Setup & Run (Using Docker)
+Clone the repository
+Navigate to the project directory
+Run: docker-compose up --build
+Open browser and visit: http://localhost:3000
+
+You will see the number of visits displayed on the screen.
+
+🔄 How It Works
+User sends a request to the application
+Node.js server processes the request
+Redis stores and retrieves the visit count
+The count is incremented on each visit
+Updated count is returned to the user
+📈 DevOps Perspective
 
 This project demonstrates:
 
-* Building a modern frontend using React
-* Development with hot-reload
-* Production build optimization
-* Ready for deployment in DevOps environments
+Containerization using Docker
+Service orchestration with Docker Compose
+State management using Redis
+Microservice communication between services
+🔧 Improvements (Future Enhancements)
+Add Kubernetes deployment
+Implement CI/CD pipeline (Jenkins or GitHub Actions)
+Use Nginx as a reverse proxy
+Enable persistent Redis storage
+Support horizontal scaling
+🧪 Testing
 
----
+You can test the application by refreshing the browser multiple times or by sending repeated requests to the application endpoint.
 
-## 🛠 Tech Stack
-
-* React (Create React App)
-* JavaScript
-* Node.js & npm
-
----
-
-## 🚀 Getting Started
-
-### Install Dependencies
-
-```bash
-npm install
-```
-
----
-
-### ▶️ Run Application
-
-```bash
-npm start
-```
-
-Open in browser:
-
-http://localhost:3000
-
----
-
-## 🧪 Testing
-
-```bash
-npm test
-```
-
-Runs tests in interactive watch mode.
-
----
-
-## 📦 Build for Production
-
-```bash
-npm run build
-```
-
-✔️ Generates optimized build in `build/` folder
-✔️ Ready for deployment
-
----
-
-## ⚠️ Eject (Advanced)
-
-```bash
-npm run eject
-```
-
-> ⚠️ One-way operation. Use only if customization is required.
-
----
-
-## 📂 Project Structure
-
-```bash
-react-app/
-├── public/
-├── src/
-├── package.json
-└── build/
-```
-
----
-
-## 🚀 Deployment (DevOps)
-
-* Serve build using Nginx / Apache
-* Deploy on AWS / Docker
-* Integrate CI/CD (Jenkins / GitHub Actions)
-
----
-
-## 🐳 Future Enhancements
-
-* Dockerize React app
-* Add Nginx reverse proxy
-* Deploy using Kubernetes
-* Add CI/CD pipeline
-
----
-
-## 👨‍💻 Author
-
-Gaurav Kumbhar
-https://github.com/madmaxdevops
+👨‍💻 Author
+Gaurav Kumbhar https://github.com/madmaxdevops
