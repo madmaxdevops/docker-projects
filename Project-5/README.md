@@ -18,7 +18,7 @@ This project contains a minimal Flask app that prints a **Hello message**, used 
 
 When running a container with:
 
-```bash
+```bash id="2y7r7s"
 docker run --network host <image>
 ```
 
@@ -40,7 +40,7 @@ docker run --network host <image>
 
 ## 📂 Project Structure
 
-```bash
+```bash id="2b5r6q"
 .
 ├── app.py
 ├── Dockerfile
@@ -53,7 +53,7 @@ docker run --network host <image>
 
 ### 1️⃣ Build Docker Image
 
-```bash
+```bash id="j6l4re"
 docker build -t flask-host-demo .
 ```
 
@@ -61,7 +61,7 @@ docker build -t flask-host-demo .
 
 ### 2️⃣ Run with Host Network
 
-```bash
+```bash id="3c0k1y"
 docker run -d --name flask-container --network host flask-host-demo
 ```
 
@@ -71,13 +71,13 @@ docker run -d --name flask-container --network host flask-host-demo
 
 Since host networking is used, access directly via:
 
-```
+```id="9x8s1u"
 http://<EC2-Public-IP>:<PORT>
 ```
 
 👉 Example:
 
-```
+```id="q2z6jm"
 http://<EC2-IP>:6100
 ```
 
@@ -103,7 +103,7 @@ http://<EC2-IP>:6100
 
 For production environments, use:
 
-```bash
+```bash id="c3y2h4"
 docker run -p 6100:6100 flask-host-demo
 ```
 
@@ -126,7 +126,7 @@ After this demo, you will understand:
 ## 👨‍💻 Author
 
 **Gaurav Kumbhar**
-📧 [gauravkumbhar9987@gmail.com](mailto:gauravkumbhar9987@gmail.com)
+🔗 https://github.com/madmaxdevops
 
 ---
 
