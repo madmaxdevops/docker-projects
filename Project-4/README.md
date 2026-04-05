@@ -1,6 +1,6 @@
 # 🐳 Docker Bridge Network Demo
 
-A sample project demonstrating how **frontend and backend containers communicate using Docker Bridge Network**.
+A sample project demonstrating how **frontend and backend containers communicate** using Docker Bridge Network.
 
 ---
 
@@ -24,7 +24,7 @@ This project showcases:
 
 ## 📂 Project Structure
 
-```bash id="a9h3sd"
+```bash
 docker-bridge-network/
 ├── frontend/
 ├── backend/
@@ -36,26 +36,26 @@ docker-bridge-network/
 
 ## 🚀 Run Using Docker
 
-### Build Images
+### 1️⃣ Build Images
 
-```bash id="v1g3ak"
+```bash
 docker build -t frontend-app ./frontend
 docker build -t backend-app ./backend
 ```
 
 ---
 
-### Create Bridge Network
+### 2️⃣ Create Bridge Network
 
-```bash id="w38m1h"
+```bash
 docker network create my-bridge-network
 ```
 
 ---
 
-### Run Containers
+### 3️⃣ Run Containers
 
-```bash id="k2c93f"
+```bash
 docker run -d --name backend --network my-bridge-network backend-app
 docker run -d --name frontend --network my-bridge-network -p 8080:80 frontend-app
 ```
@@ -64,13 +64,13 @@ docker run -d --name frontend --network my-bridge-network -p 8080:80 frontend-ap
 
 ## 🔄 How It Works
 
-* Both containers are connected to the same bridge network
-* Frontend communicates with backend using container name
-* Docker provides internal DNS for service discovery
+* Both containers are connected to the same **bridge network**
+* Frontend communicates with backend using **container name**
+* Docker provides **internal DNS for service discovery**
 
-Example:
+### ✅ Example
 
-```bash id="m7qxzw"
+```bash
 http://backend:5000
 ```
 
@@ -78,13 +78,15 @@ http://backend:5000
 
 ## 🌐 Access Application
 
+```bash
 http://localhost:8080
+```
 
 ---
 
 ## 🔍 Verify Network
 
-```bash id="g81k9p"
+```bash
 docker network inspect my-bridge-network
 ```
 
@@ -109,6 +111,7 @@ docker network inspect my-bridge-network
 
 ## 👨‍💻 Author
 
-Gaurav Kumbhar
-https://github.com/madmaxdevops
+**Gaurav Kumbhar**
+🔗 https://github.com/madmaxdevops
 
+---
