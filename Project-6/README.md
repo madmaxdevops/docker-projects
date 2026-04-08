@@ -136,13 +136,7 @@ docker run -d -p 7000:80 --link db:db result-app
 ## 👨‍💻 Author
 
 **Gaurav Kumbhar**
-DevOps Engineer | AWS | Docker | Automation
-🔗 GitHub: https://github.com/gauravkumbhar9987
+🔗 https://github.com/madmaxdevops
 
 ---
 
-## ⭐ Support
-
-If you like this project, give it a ⭐ on GitHub!
-
----
